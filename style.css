@@ -1,0 +1,85 @@
+body {
+  background-color: #050210;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+#blur {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+  position: absolute;
+  top: 250px;
+  left: 750px;
+  border-radius: 100%;
+  animation: boje 2s linear infinite;
+}
+@keyframes boje {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#blur::after {
+  content: "";
+  filter: blur(50px);
+  background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  border-radius: 100%;
+  top: 0px;
+  left: 0px;
+  animation: boje 2s linear infinite;
+}
+
+#third_circle {
+  width: 350px;
+  height: 350px;
+  background: black;
+  border-radius: 100%;
+  position: absolute;
+  top: 275px;
+  left: 775px;
+}
+#second_circle {
+  width: 350px;
+  height: 350px;
+  background: #050220;
+  border-radius: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  animation: krug2 1s linear infinite;
+}
+#first_circle {
+  width: 350px;
+  height: 350px;
+  background: #050225;
+  border-radius: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  animation: krug 1s linear infinite;
+}
+
+@keyframes krug {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+@keyframes krug2 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
